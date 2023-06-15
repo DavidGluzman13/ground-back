@@ -49,6 +49,15 @@ module.exports = [
     energy: getRandomNumber(3, 5), // Sustained energy throughout the day
     hours_slept: getRandomNumber(6, 8), // Average to good sleep duration
   },
+  {
+    id: 6,
+    user_id: 4,
+    content: "blah blah",
+    feeling: getRandomNumber(3, 4), // Improvement from often feeling low (2 or 3) to a more neutral feeling (3 or 4)
+    hunger: getRandomNumber(1, 5),
+    energy: getRandomNumber(3, 5), // Sustained energy throughout the day
+    hours_slept: getRandomNumber(6, 8), // Average to good sleep duration
+  },
 ];
 
 // Helper function to generate a random number within a given range (inclusive)

@@ -1,3 +1,5 @@
+const { faker } = require("@faker-js/faker");
+
 module.exports = [
   {
     id: 1,
@@ -26,6 +28,12 @@ module.exports = [
   {
     id: 5,
     name: "Haim Shapira",
+    email: "shapirahaim@motek.com",
+    age: 56,
+  },
+  {
+    id: 6,
+    name: faker.person.fullName(),
     email: "shapirahaim@motek.com",
     age: 56,
   },
