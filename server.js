@@ -36,6 +36,16 @@ app.get("/users", (_req, res) => {
     });
 });
 
+app.get("/users/:userId", (req, res) => {
+  knex
+    .select("*")
+    .from("users")
+    .where({ id: req.params.userId })
+    .then((logs) => {
+      res.json(logs);
+    });
+});
+
 app.get("/users/:userId/logs", (req, res) => {
   // add the ability to get posts for a specific user
   // get id of user

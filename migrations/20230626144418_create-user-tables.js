@@ -10,7 +10,6 @@ exports.up = function (knex) {
       table.string("name").notNullable();
       table.string("email").notNullable();
       table.integer("age").notNullable();
-      table.
       table.timestamp("created_at").defaultTo(knex.fn.now());
       table
         .timestamp("updated_at")
@@ -20,10 +19,10 @@ exports.up = function (knex) {
       // Renamed the table to "feelings_logs"
       table.increments("id");
       table.integer("user_id").unsigned().notNullable();
-      table.date("date_column");
+      table.date("date_column"); // make sure that the date and the user arent the same per entry
       table.string("content").notNullable();
       table.integer("feeling").unsigned().notNullable();
-      table.integer("hunger").unsigned().notNullable();
+      table.integer("activity").unsigned().notNullable();
       table.integer("energy").unsigned().notNullable();
       table.integer("hours_slept").unsigned().notNullable(); // Updated the column name to "hours_slept"
       table
